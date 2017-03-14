@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Record</title>
+  <!--下記meta name="viewport~ を入れないと、web上のデザインがスマホサイズに圧縮された状態になってしまう。-->
+  <link rel="stylesheets" href="normalize.css">
+  <link rel="stylesheets" href="tweets.scss">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <header>
+    <ul class="header_ul">
+        <li class="link_to_home"><%= link_to "ホーム", tweets_path %></li>
+        <!--<li class="link_to_home"><%= link_to "モーメント", tweets_path %></li>-->
+        <!--<li class="link_to_home"><%= link_to "通知", tweets_path %></li>-->
+        <!--<li class="link_to_home"><%= link_to "メッセージ", tweets_path %></li>-->
+        <li class="link_to_tweet"><%= link_to "ツイート", new_tweet_path, class: 'btn btn-default' %></li>
+        <li class="twitter_icon">
+          <img src="<%= asset_path "twitter_icon.png" %>">
+        </li>
+    </ul>
+  </header>
+  
+
+  <%= yield %>
+
+  
+  <footer>
+    <p>DIVE07_大課題1</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="div_main_frame">
+    <div class="row">
+    
+      <div class="col-md-3 col-xs-12">
+        <div class="div_notice">
+          <p id="tweet_index">ツイート一覧<p>
+          <p><%= notice %></p>
+          <p>DIVE07_大課題1</p>
+        </div>
+      </div>
+    
+      <div class="col-md-6 col-xs-12">
+        <div class="div_tweets">
+          <% @tweets.each do |tweet| %>
+          <div class="div_tweet">
+            <p><%= tweet.content %></p>
+            <%= link_to "編集", edit_tweet_path(tweet.id), class: 'btn btn-default btn-sm btn-success' %>
+            <%= link_to "削除", tweet_path(tweet.id), data: { confirm: '本当に削除していいですか？' }, method: :delete, class: 'btn btn-default btn-sm btn btn-danger' %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- トップに戻るボタン DIVE05-->
+<!--<div id="blog-page-top-btn" class="blog-page-top-btn">-->
+<!--  <p><a class="move-blog-page-top" id="move-blog-page-top">▲</a></p>-->
+<!--</div>-->

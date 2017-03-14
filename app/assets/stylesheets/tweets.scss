@@ -1,0 +1,106 @@
+body {
+    background-color: #f5f8fa;
+}
+
+header {
+    z-index: 998;
+    position: fixed;
+    height: 48px;
+    width: 100%;
+    margin: 0 auto;
+    list-style: none;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+header ul {
+    z-index: 999;
+    position: fixed;
+    height: 47px;
+    width: 100%;
+    margin: 0 auto;
+    list-style: none;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.link_to_home {
+    display: block;
+    float: left;
+    width: auto;
+    padding: 15px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #66757f;
+}
+
+.link_to_tweet {
+    display: block;
+    float: right;
+    padding-right: 50px;
+    padding-top: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #66757f;
+}
+
+.twitter_icon {
+    display: block;
+    margin-left: 50%;
+    padding-top: 12px;
+}
+
+.twitter_icon img{
+    max-height: 20px;
+    width: auto;
+}
+
+// clearfix
+header ul:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.div_main_frame {
+    margin-top: 58px;
+}
+
+.div_notice {
+    text-align: center;
+    background-color: #fff;
+}
+
+#tweet_index {
+    font-size: 20px;
+}
+
+.div_tweets {
+    margin-bottom: 100px;
+    background-color: #fff;
+}
+
+.div_tweet {
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+
+// .div_tweet:after {
+//     content: "";
+//     display: block;
+//     clear: both;
+// }
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
